@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+
+Sitemap: https://dichumanitiesclub.edu.bd/sitemap.xml

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments & Wings | DIC Humanities Club Specializations</title>
+    <meta name="description" content="Explore the specialized departments of DIC Humanities Club: Cultural Activities, Research & Publications, Creative Writing, Media & Public Relations, and Social Initiatives.">
+    
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="DIC Humanities Club departments, humanities club activities, cultural department, research wing, creative writing Bangladesh, student media club">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Departments Specific Styles */
+        .departments-hero {
+            background: linear-gradient(135deg, #2e7d32, #4caf50);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .departments-container {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .department-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .department-header {
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .department-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .department-content {
+            padding: 25px;
+        }
+        
+        .department-content h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        
+        .activities-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .activities-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .activities-list li:before {
+            content: "✓";
+            color: #4caf50;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .department-head {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .head-info {
+            margin-left: 15px;
+        }
+        
+        .head-info strong {
+            display: block;
+            color: #333;
+        }
+        
+        .head-info span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Department Colors */
+        .cultural { background: linear-gradient(135deg, #ff9800, #ff5722); }
+        .research { background: linear-gradient(135deg, #2196f3, #1976d2); }
+        .creative { background: linear-gradient(135deg, #9c27b0, #7b1fa2); }
+        .media { background: linear-gradient(135deg, #607d8b, #455a64); }
+        .social { background: linear-gradient(135deg, #795548, #5d4037); }
+        
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-box {
+            padding: 30px;
+            border-radius: 10px;
+            background: #f5f7fa;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .department-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">DIC</div>
+                    <div class="logo-text">
+                        <span class="logo-title">DIC Humanities Club</span>
+                        <span class="logo-subtitle">Dhaka Imperial College</span>
+                    </div>
+                </a>
+                <button class="mobile-menu">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="departments.html" class="active">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="departments-hero">
+        <div class="container">
+            <h1>Our Departments & Wings</h1>
+            <p class="hero-subtitle">Specialized teams driving diverse humanities initiatives and cultural activities</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Specialized Departments</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Active Volunteers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Humanities Focus</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Grid -->
+    <section class="departments-container">
+        <div class="container">
+            <h2 style="text-align: center; color: #2e7d32; margin-bottom: 40px;">Explore Our Departments</h2>
+            
+            <div class="department-grid">
+                <!-- Cultural Activities Department -->
+                <div class="department-card">
+                    <div class="department-header cultural">
+                        <div class="department-icon">🎭</div>
+                        <h2>Cultural Activities</h2>
+                    </div>
+                    <div class="department-content">
+                        <h3>Preserving & Promoting Cultural Heritage</h3>
+                        <p>Celebrating the rich cultural diversity through traditional and contemporary arts, music, dance, and drama.</p>
+                        
+                        <ul class="activities-list">
+                            <li>Annual Cultural Fest "Rongin Shomoy"</li>
+                            <li>Traditional Music & Dance Workshops</li>
+                            <li>Art Exhibitions & Craft Fairs</li>
+                            <li>Pohela Boishakh Celebrations</li>
+                            <li>International Mother Language Day Events</li>
+                            <li>Drama & Theater Productions</li>
+                        </ul>
+                        
+                        <div class="department-head">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #ff9800; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                SA
+                            </div>
+                            <div class="head-info">
+                                <strong>Sabrina Akter</strong>
+                                <span>Department Head</span>
+                                <span>Department of Music</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="events.html#cultural" style="color: #ff9800; text-decoration: none; font-weight: 500;">
+                                View Cultural Events →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Research & Publications Department -->
+                <div class="department-card">
+                    <div class="department-header research">
+                        <div class="department-icon">📚</div>
+                        <h2>Research & Publications</h2>
+                    </div>
+                    <div class="department-content">
+                        <h3>Academic Excellence & Intellectual Discourse</h3>
+                        <p>Promoting research culture and scholarly publications in humanities disciplines.</p>
+                        
+                        <ul class="activities-list">
+                            <li>Annual Humanities Conference</li>
+                            <li>Research Paper Competitions</li>
+                            <li>Academic Writing Workshops</li>
+                            <li>Club Journal "Manobotar Drishti"</li>
+                            <li>Faculty-Student Research Collaboration</li>
+                            <li>Literature Review Sessions</li>
+                        </ul>
+                        
+                        <div class="department-head">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #2196f3; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                AH
+                            </div>
+                            <div class="head-info">
+                                <strong>Arif Hossain</strong>
+                                <span>Department Head</span>
+                                <span>Department of Philosophy</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="#" style="color: #2196f3; text-decoration: none; font-weight: 500;">
+                                Read Publications →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Creative Writing Department -->
+                <div class="department-card">
+                    <div class="department-header creative">
+                        <div class="department-icon">✍️</div>
+                        <h2>Creative Writing</h2>
+                    </div>
+                    <div class="department-content">
+                        <h3>Nurturing Literary Talent & Expression</h3>
+                        <p>Developing creative writing skills through workshops, competitions, and literary publications.</p>
+                        
+                        <ul class="activities-list">
+                            <li>Creative Writing Workshops</li>
+                            <li>Poetry & Short Story Competitions</li>
+                            <li>Literary Magazine "Kobitar Ashor"</li>
+                            <li>Book Review Sessions</li>
+                            <li>Author Meet & Greet Events</li>
+                            <li>Translation Workshops</li>
+                        </ul>
+                        
+                        <div class="department-head">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #9c27b0; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                KU
+                            </div>
+                            <div class="head-info">
+                                <strong>Kamal Uddin</strong>
+                                <span>Department Head</span>
+                                <span>Department of English</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="#" style="color: #9c27b0; text-decoration: none; font-weight: 500;">
+                                Read Literary Works →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Media & Public Relations -->
+                <div class="department-card">
+                    <div class="department-header media">
+                        <div class="department-icon">📱</div>
+                        <h2>Media & PR</h2>
+                    </div>
+                    <div class="department-content">
+                        <h3>Amplifying Our Voice & Vision</h3>
+                        <p>Managing club's digital presence, photography, videography, and public relations.</p>
+                        
+                        <ul class="activities-list">
+                            <li>Social Media Management</li>
+                            <li>Event Photography & Videography</li>
+                            <li>Press Release & Media Relations</li>
+                            <li>Content Creation for Digital Platforms</li>
+                            <li>Newsletter Publication</li>
+                            <li>Documentary Filmmaking</li>
+                        </ul>
+                        
+                        <div class="department-head">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #607d8b; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                TR
+                            </div>
+                            <div class="head-info">
+                                <strong>Tasnim Rahman</strong>
+                                <span>Department Head</span>
+                                <span>Department of English</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="gallery.html" style="color: #607d8b; text-decoration: none; font-weight: 500;">
+                                View Media Gallery →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Initiatives Department -->
+                <div class="department-card">
+                    <div class="department-header social">
+                        <div class="department-icon">🤝</div>
+                        <h2>Social Initiatives</h2>
+                    </div>
+                    <div class="department-content">
+                        <h3>Humanities in Service to Society</h3>
+                        <p>Applying humanities knowledge to address social issues and contribute to community development.</p>
+                        
+                        <ul class="activities-list">
+                            <li>Community Literacy Programs</li>
+                            <li>Cultural Heritage Preservation</li>
+                            <li>Social Awareness Campaigns</li>
+                            <li>Rural School Workshops</li>
+                            <li>Disaster Relief Coordination</li>
+                            <li>Elderly Care Initiatives</li>
+                        </ul>
+                        
+                        <div class="department-head">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: #795548; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                                SA
+                            </div>
+                            <div class="head-info">
+                                <strong>Sakib Al Hasan</strong>
+                                <span>Department Head</span>
+                                <span>Department of Sociology</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="#" style="color: #795548; text-decoration: none; font-weight: 500;">
+                                View Social Projects →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #2e7d32; margin-bottom: 40px;">Department Achievements</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">25+</span>
+                    <span>Cultural Events Organized</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">40+</span>
+                    <span>Research Papers Published</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">200+</span>
+                    <span>Literary Works Created</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">15+</span>
+                    <span>Social Projects Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Department Section -->
+    <section class="departments-container" style="background: #2e7d32; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Join a Department</h2>
+                <p style="margin: 20px 0; line-height: 1.6;">
+                    Interested in contributing to a specific area? Join one of our departments and work with like-minded 
+                    humanities students to create meaningful impact.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="membership.html#departments" style="display: inline-block; background: white; color: #2e7d32; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">
+                        Apply to Join a Department
+                    </a>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+                    Open to all Humanities Department students of Dhaka Imperial College
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Department Collaboration -->
+    <section class="departments-container" style="background: white;">
+        <div class="container">
+            <h2 style="text-align: center; color: #2e7d32; margin-bottom: 40px;">Inter-Department Collaboration</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="line-height: 1.6; margin-bottom: 30px;">
+                    Our departments work collaboratively on major projects. For example, the Cultural Department 
+                    partners with Media & PR for event coverage, while Research Department collaborates with 
+                    Creative Writing for publication projects.
+                </p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
+                    <div style="background: #f5f7fa; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">Collaborative Projects</h4>
+                        <ul style="text-align: left; list-style: none;">
+                            <li>🎭 Cultural Fest with Media Coverage</li>
+                            <li>📚 Research Publication with Creative Writing</li>
+                            <li>🤝 Social Projects with All Departments</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f5f7fa; padding: 20px; border-radius: 10px; flex: 1; min-width: 200px;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">Shared Resources</h4>
+                        <ul style="text-align: left; list-style: none;">
+                            <li>📖 Departmental Library Access</li>
+                            <li>🎨 Creative Materials & Equipment</li>
+                            <li>💻 Digital Media Resources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Specialized Humanities Departments</h3>
+                <p>Each department focuses on specific areas of humanities study and application</p>
+                <p>© 2024 DIC Humanities Club | Departments for Humanities Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Department card interaction
+        document.querySelectorAll('.department-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('a')) {
+                    const link = this.querySelector('a');
+                    if (link) {
+                        window.location.href = link.href;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

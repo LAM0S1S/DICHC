@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | DIC Humanities Club</title>
+    <meta name="description" content="Photo gallery of Dhaka Imperial College Humanities Club events and activities. Visual journey through our cultural and academic initiatives.">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Gallery Styles */
+        .gallery-hero {
+            background: linear-gradient(135deg, #00695c, #00897b);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .gallery-container {
+            padding: 60px 20px;
+            background: #f8f9fa;
+            min-height: 500px;
+        }
+        
+        .empty-gallery {
+            text-align: center;
+            padding: 80px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .empty-icon {
+            font-size: 64px;
+            margin-bottom: 30px;
+            opacity: 0.3;
+        }
+        
+        .gallery-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .category-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #00897b;
+        }
+        
+        .coming-soon {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .upload-guidelines {
+            background: #e8f5e9;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">DIC</div>
+                    <div class="logo-text">
+                        <span class="logo-title">DIC Humanities Club</span>
+                        <span class="logo-subtitle">Dhaka Imperial College</span>
+                    </div>
+                </a>
+                <button class="mobile-menu">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Photo & Video Gallery</h1>
+            <p class="hero-subtitle">Visual journey through our humanities initiatives and cultural activities</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Photos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Videos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Events Covered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-container">
+        <div class="container">
+            <h2 style="text-align: center; color: #00695c; margin-bottom: 20px;">Gallery Categories</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">
+                Our gallery will feature photos and videos from various humanities-focused activities
+            </p>
+            
+            <div class="gallery-categories">
+                <div class="category-card">
+                    <div class="category-icon">🎭</div>
+                    <h3>Cultural Events</h3>
+                    <p>Photos from cultural festivals, performances, and celebrations</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">📚</div>
+                    <h3>Academic Activities</h3>
+                    <p>Workshops, seminars, and research presentations</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">✍️</div>
+                    <h3>Creative Sessions</h3>
+                    <p>Writing workshops, art sessions, literary gatherings</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">🤝</div>
+                    <h3>Community Engagement</h3>
+                    <p>Social initiatives and outreach programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empty Gallery Message -->
+    <section class="gallery-container" style="background: white;">
+        <div class="container">
+            <div class="empty-gallery">
+                <div class="empty-icon">📷</div>
+                <h2 style="color: #00695c; margin-bottom: 20px;">Gallery Coming Soon</h2>
+                <p style="color: #666; line-height: 1.6; margin-bottom: 30px;">
+                    Our photo and video gallery is currently being prepared. 
+                    After our first events, photos will be uploaded here for everyone to enjoy.
+                </p>
+                <div style="margin-top: 40px;">
+                    <a href="events.html" style="display: inline-block; background: #00695c; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">
+                        Check Our Events
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Sections -->
+    <section class="gallery-container">
+        <div class="container">
+            <div class="coming-soon">
+                <div class="category-icon">🎬</div>
+                <h3 style="color: #00695c; margin-bottom: 15px;">Video Gallery</h3>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Event highlights, interviews, and documentary clips will be featured here.
+                </p>
+                <p style="font-size: 0.9rem; color: #888;">
+                    Coming after our first major event
+                </p>
+            </div>
+            
+            <div class="coming-soon">
+                <div class="category-icon">📱</div>
+                <h3 style="color: #00695c; margin-bottom: 15px;">Social Media Highlights</h3>
+                <p style="color: #666; margin-bottom: 20px;">
+                    Best photos from our social media platforms will be curated here.
+                </p>
+                <p style="font-size: 0.9rem; color: #888;">
+                    Connect with us on social media
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Submission Guidelines -->
+    <section class="gallery-container" style="background: white;">
+        <div class="container">
+            <div class="upload-guidelines">
+                <h3 style="color: #00695c; margin-bottom: 20px;">Want to Contribute Photos?</h3>
+                <p style="color: #555; margin-bottom: 15px;">
+                    Once our gallery is active, members can submit their photos from club events.
+                </p>
+                <ul style="color: #555; line-height: 1.6; padding-left: 20px;">
+                    <li>High-quality photos from club events only</li>
+                    <li>Include brief description and event name</li>
+                    <li>Photos must be appropriate and relevant</li>
+                    <li>Credit will be given to photographers</li>
+                </ul>
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                    Submission guidelines will be shared when gallery is live
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect with Media Team -->
+    <section class="gallery-container" style="background: #00695c; color: white;">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2>Media Team Contact</h2>
+                <p style="margin: 20px 0; line-height: 1.6;">
+                    For photo inquiries or media coverage of upcoming events, contact our Media & PR department.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="contact.html#media" style="display: inline-block; background: white; color: #00695c; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600;">
+                        Contact Media Team
+                    </a>
+                </div>
+                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+                    Email: media@dic-humanities.edu.bd
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Gallery Information</h3>
+                <p>Photos from events will be uploaded here after each activity</p>
+                <p>© 2024 DIC Humanities Club | Gallery under development</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join as Member | DIC Humanities Club</title>
+    <meta name="description" content="Become a member of Dhaka Imperial College Humanities Club. Join 1st & 2nd year humanities students in cultural and academic activities.">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Membership Styles */
+        .membership-hero {
+            background: linear-gradient(135deg, #ff6f00, #ff9800);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .membership-container {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff9800;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .required {
+            color: #ff4444;
+        }
+        
+        .note {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .eligibility-box {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #4caf50;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">DIC</div>
+                    <div class="logo-text">
+                        <span class="logo-title">DIC Humanities Club</span>
+                        <span class="logo-subtitle">Dhaka Imperial College</span>
+                    </div>
+                </a>
+                <button class="mobile-menu">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="committee.html">Committee</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="membership.html" class="active">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="membership-hero">
+        <div class="container">
+            <h1>Join DIC Humanities Club</h1>
+            <p class="hero-subtitle">For 1st & 2nd Year Humanities Students Only</p>
+        </div>
+    </section>
+
+    <!-- Eligibility Box -->
+    <section class="membership-container" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="eligibility-box">
+                <h3 style="color: #2e7d32; margin-bottom: 10px;">📋 Eligibility Criteria</h3>
+                <ul style="color: #555; line-height: 1.6; padding-left: 20px;">
+                    <li>Must be a <strong>1st or 2nd Year student</strong> of Dhaka Imperial College</li>
+                    <li>Must be from <strong>Humanities Department</strong></li>
+                    <li>Must have valid roll number</li>
+                    <li>Commitment to participate in club activities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Form -->
+    <section class="membership-container">
+        <div class="container">
+            <div class="form-container">
+                <h2 style="text-align: center; color: #ff9800; margin-bottom: 30px;">Member Registration Form</h2>
+                
+                <div class="note">
+                    <p><strong>Note:</strong> Membership is open only to <strong>1st & 2nd Year</strong> students of Dhaka Imperial College Humanities Department.</p>
+                </div>
+                
+                <form id="membershipForm">
+                    <!-- Personal Information -->
+                    <h3 style="color: #333; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #eee;">
+                        Personal Information
+                    </h3>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rollNumber">Roll Number <span class="required">*</span></label>
+                        <input type="text" id="rollNumber" name="rollNumber" required placeholder="e.g., 123456">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="student@dic.edu.bd">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+                        </div>
+                    </div>
+                    
+                    <!-- Academic Information -->
+                    <h3 style="color: #333; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #eee;">
+                        Academic Information
+                    </h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="year">Academic Year <span class="required">*</span></label>
+                            <select id="year" name="year" required>
+                                <option value="">Select Year</option>
+                                <option value="1st">1st Year</option>
+                                <option value="2nd">2nd Year</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="section">Section <span class="required">*</span></label>
+                            <select id="section" name="section" required>
+                                <option value="">Select Section</option>
+                                <option value="A">Section A</option>
+                                <option value="B">Section B</option>
+                                <option value="C">Section C</option>
+                                <option value="D">Section D</option>
+                                <option value="E">Section E</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Interests -->
+                    <h3 style="color: #333; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #eee;">
+                        Areas of Interest (Optional)
+                    </h3>
+                    
+                    <div class="form-group">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                                <input type="checkbox" name="interest[]" value="cultural"> Cultural Activities
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                                <input type="checkbox" name="interest[]" value="research"> Research
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                                <input type="checkbox" name="interest[]" value="writing"> Creative Writing
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                                <input type="checkbox" name="interest[]" value="media"> Media & Photography
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                                <input type="checkbox" name="interest[]" value="social"> Social Initiatives
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Declaration -->
+                    <div class="form-group">
+                        <div style="display: flex; align-items: flex-start; gap: 10px; margin-top: 20px;">
+                            <input type="checkbox" id="declaration" name="declaration" required style="width: auto;">
+                            <label for="declaration" style="font-weight: normal;">
+                                I declare that I am a <strong>1st or 2nd Year student</strong> of Dhaka Imperial College 
+                                Humanities Department. All information provided is correct. I agree to abide by the 
+                                club's rules and regulations.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="form-group" style="margin-top: 40px;">
+                        <button type="submit" style="width: 100%; background: #ff9800; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">
+                            Submit Membership Application
+                        </button>
+                    </div>
+                    
+                    <p style="text-align: center; color: #666; margin-top: 20px;">
+                        We will contact you within 3-5 working days after reviewing your application.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="membership-container" style="background: white;">
+        <div class="container">
+            <h2 style="text-align: center; color: #ff9800; margin-bottom: 40px;">Benefits for 1st & 2nd Year Students</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="text-align: center; padding: 25px; border-radius: 10px; background: #fff8e1;">
+                    <div style="font-size: 36px; margin-bottom: 15px;">🎓</div>
+                    <h3 style="color: #333; margin-bottom: 10px;">Academic Support</h3>
+                    <p>Guidance from senior students and faculty members</p>
+                </div>
+                
+                <div style="text-align: center; padding: 25px; border-radius: 10px; background: #e8f5e9;">
+                    <div style="font-size: 36px; margin-bottom: 15px;">👥</div>
+                    <h3 style="color: #333; margin-bottom: 10px;">Peer Network</h3>
+                    <p>Connect with fellow 1st & 2nd year humanities students</p>
+                </div>
+                
+                <div style="text-align: center; padding: 25px; border-radius: 10px; background: #e3f2fd;">
+                    <div style="font-size: 36px; margin-bottom: 15px;">🎭</div>
+                    <h3 style="color: #333; margin-bottom: 10px;">Skill Development</h3>
+                    <p>Workshops tailored for junior students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="membership-container">
+        <div class="container">
+            <h2 style="text-align: center; color: #ff9800; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 20px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #333; margin-bottom: 10px;">Is there any membership fee?</h3>
+                    <p style="color: #666;">Yes, there's a nominal annual fee of ৳200 for regular members. The fee helps cover event expenses and club activities.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #333; margin-bottom: 10px;">When will I know if my application is accepted?</h3>
+                    <p style="color: #666;">You will receive an email within 3-5 working days. Accepted members will be invited to an orientation session.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #333; margin-bottom: 10px;">What activities can I participate in as a member?</h3>
+                    <p style="color: #666;">Members can participate in cultural events, workshops, research projects, creative writing sessions, and social initiatives organized by the club.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                    <h3 style="color: #333; margin-bottom: 10px;">How often are club meetings held?</h3>
+                    <p style="color: #666;">Regular club meetings are held every Thursday from 11:30 AM to 12:20 PM during academic sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center;">
+                <h3>Membership Information</h3>
+                <p>For 1st & 2nd Year Humanities Students Only</p>
+                <p>Email: dic.humanitiesclub@gmail.com</p>
+                <p>© 2024 DIC Humanities Club | Junior Student Membership</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Form validation and submission
+        document.getElementById('membershipForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const fullName = document.getElementById('fullName').value.trim();
+            const rollNumber = document.getElementById('rollNumber').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const year = document.getElementById('year').value;
+            const section = document.getElementById('section').value;
+            const declaration = document.getElementById('declaration').checked;
+            
+            // Basic validation
+            if (!fullName || !rollNumber || !email || !phone || !year || !section) {
+                alert('Please fill in all required fields marked with *');
+                return;
+            }
+            
+            if (!declaration) {
+                alert('You must agree to the declaration to submit your application');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Phone validation (Bangladeshi format)
+            const phoneRegex = /^01[3-9]\d{8}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid Bangladeshi phone number (11 digits starting with 01)');
+                return;
+            }
+            
+            // Show loading
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you for your application! We will contact you within 3-5 working days.');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
